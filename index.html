@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather app</title>
+		<meta charset="UTF-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="box">
+				<form action="" id="search_frm">
+					<input class="btn search_btn" type="submit" value="Search" id="search_btn" />
+					<input type="search" name="search" id="search" placeholder="City to  search" />
+				</form>
+				<div class="local_info">
+					<div class="local-btn">
+						<button class="btn" id="local_btn">Local</button>
+					</div>
+					<div class="info">
+						<h2 id="searched-city">🌤 Stockholm</h2>
+
+						<p>
+							<span class="tmpr">20°</span><a href="#" class="tmpr mark" id="celsius"> C </a> | <a href="#" class="unactive mark" id="fahrenheit"> F </a> Temperature
+							<br />
+							1% Precipitation <br />
+							62% Humidity <br />
+							4 m/s Wind <br />
+							04:33 | 21:14 Sunrise | sunset
+						</p>
+						<p id="current-place-date">
+							<strong>Sunday</strong> 01.08.2022 <br />
+							10:30 pm
+						</p>
+						<table>
+							<th>Time</th>
+							<th>Cloud Cover</th>
+							<th>Snow Risk</th>
+							<th>Storm Risk</th>
+							<tr>
+								<td>current <br /></td>
+								<td>90%</td>
+								<td>0%</td>
+								<td>0%</td>
+							</tr>
+							<tr>
+								<td>
+									current + <br />
+									1 hour
+								</td>
+								<td>90%</td>
+								<td>0%</td>
+								<td>0%</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</main>
+			<aside class="box">
+				<div class="weekday">
+					<div class="day">
+						<strong>Monday</strong>
+					</div>
+					<div class="day-inf">
+						<p>
+							<span class="date"> 02.08.2022</span>
+							<span class="tmpr">20°</span> |400 C | F Temperature <br />
+
+							62% Humidity <br />
+						</p>
+					</div>
+				</div>
+				<div class="weekday">
+					<div class="day">
+						<strong>Tuesday</strong>
+					</div>
+					<div class="day-inf">
+						<p>
+							<span class="date"> 02.08.2022</span>
+							<span class="tmpr">20°</span> |400 C | F Temperature <br />
+
+							62% Humidity <br />
+						</p>
+					</div>
+				</div>
+				<div class="weekday">
+					<div class="day">
+						<strong>Wednesday</strong>
+					</div>
+					<div class="day-inf">
+						<p>
+							<span class="date"> 02.08.2022</span>
+							<span class="tmpr">20°</span> |400 C | F Temperature <br />
+
+							62% Humidity <br />
+						</p>
+					</div>
+				</div>
+				<div class="weekday">
+					<div class="day">
+						<strong>Thursday</strong>
+					</div>
+					<div class="day-inf">
+						<p>
+							<span class="date"> 02.08.2022</span>
+							<span class="tmpr">20°</span> |400 C | F Temperature <br />
+
+							62% Humidity <br />
+						</p>
+					</div>
+				</div>
+				<div class="weekday">
+					<div class="day">
+						<strong>Friday</strong>
+					</div>
+					<div class="day-inf">
+						<p>
+							<span class="date"> 02.08.2022</span>
+							<span class="tmpr">20°</span> |400 C | F Temperature <br />
+
+							62% Humidity <br />
+						</p>
+					</div>
+				</div>
+			</aside>
+		</div>
+		<!--<script src="javascript/hello.js"></script>-->
+		<script src="src/index.js"></script>
+	</body>
+</html>
