@@ -172,3 +172,17 @@ table {
 	display: block;
 	margin: 0 auto;
 }
+#weather_icon {
+	width: 32px;
+	height: 32px;
+	vertical-align: bottom;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+#weather_dsc {
+	text-transform: capitalize;
+	font-size: smaller;
+	font-weight: lighter;
+	color: deeppink;
+}
