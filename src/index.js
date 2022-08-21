@@ -8,10 +8,10 @@ Please note: there's no need to include a temperature conversion at the moment. 
 Add a Current Location button. When clicking on it, it uses the Geolocation API to get your GPS coordinates and display and the city and current temperature using the OpenWeather API.
 Improve the project including the search engine, API integration,
  unit conversion, wind speed, weather description, and weather icon are mandatory.
-  The project should not include the forecast yet.
+  The project should   include the forecast  .
 */
-let APIkey = "12f9bca0d293ab6474784507bbb9ee8c";
-let units = "metric";
+const APIkey = "12f9bca0d293ab6474784507bbb9ee8c";
+const units = "metric";
 const days = 5;
 function setWeatherH2Dsc(description, icon_src, city) {
 	document.querySelector("#searched-city").innerHTML = `<img id="weather_icon" src="${icon_src}" />
@@ -33,7 +33,7 @@ function setFahrenheit(temperature, temperatureVal, temperatureC, temperatureF) 
 }
 
 function setTemperature(temperature, i = "") {
-	let temperatureC = document.querySelector("#celsius" + i); //fahrenheit
+	let temperatureC = document.querySelector("#celsius" + i);
 	let temperatureF = document.querySelector("#fahrenheit" + i);
 	let temperatureVal = document.querySelector("#city_tmpr" + i);
 	temperature = Math.round(temperature);
@@ -86,7 +86,7 @@ function setWeatherFeatures(features) {
 }
 
 function setForecast(response) {
-	console.log(response.data);
+	//console.log(response.data);
 	let zone = response.data.timezone_offset;
 	let weather_arr = response.data.daily; //[]
 
@@ -176,10 +176,15 @@ function setSearchedCity(event) {
 	//document.querySelector("#searched-city").innerHTML = `🌤 ${searchedCity.value}`;
 	let weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&appid=${APIkey}&units=${units}`; //console.log(weatherAPI);
 
-	//axios.get(weatherAPI).then(setWeather, arguments[0], false);// function() {
-	axios.get(weatherAPI).then(function () {
-		setWeather(arguments[0], false);
-	});
+	axios
+		.get(weatherAPI)
+		.then(function () {
+			setWeather(arguments[0], false);
+		})
+		.catch((error) => {
+			alert("Invalid city name");
+			//console.log(error); //Logs a string: Error: Request failed with status code 404
+		});
 }
 //setLocalCity();
 window.addEventListener("DOMContentLoaded", setLocalCity);
