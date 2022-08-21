@@ -28,7 +28,7 @@
 						</h2>
 
 						<p>
-							<span class="tmpr">20°</span><a href="#" class="tmpr mark" id="celsius"> C </a> | <a href="#" class="unactive mark" id="fahrenheit"> F </a> Temperature
+							<span class="tmpr" id="city_tmpr">20°</span><a href="#" class="tmpr mark" id="celsius"> C </a> | <a href="#" class="unactive mark" id="fahrenheit"> F </a> Temperature
 							<span id="weather_features"
 								><br />
 								1 hPa Atmospheric pressure <br />
@@ -41,11 +41,11 @@
 							<strong>Sunday</strong> 01.08.2022 <br />
 							10:30 pm
 						</p>
-						<table>
+						<table id="precipitation">
 							<th>Time</th>
-							<th>Cloud Cover</th>
-							<th>Snow Risk</th>
-							<th>Storm Risk</th>
+							<th>Clouds</th>
+							<th>Rain</th>
+							<th>Snow</th>
 							<tr>
 								<td>current <br /></td>
 								<td>90%</td>
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 			</main>
-			<aside class="box">
+			<aside class="box" id="forecast">
 				<div class="weekday">
 					<div class="day">
 						<strong>Monday</strong>

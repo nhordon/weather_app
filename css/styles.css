@@ -21,6 +21,7 @@ th {
 	background-color: #444;
 	color: #fff;
 	border-radius: 10px;
+	padding: 0px 10px 0px 10px;
 }
 td {
 	border: 2px dashed #444;
@@ -30,7 +31,13 @@ td {
 }
 table {
 	font-size: 14px;
-	margin-left: -20px;
+	text-align: center;
+
+	position: relative;
+	align-self: center;
+}
+img {
+	vertical-align: text-bottom;
 }
 .wrapper {
 	display: grid;
@@ -152,8 +159,8 @@ table {
 	padding: 10px 10px;
 }
 .btn:hover {
-	background: white;
-	color: #1a64d6;
+	color: white;
+	background-color: #231d3c;
 }
 .weekday {
 	margin-top: 10px;
